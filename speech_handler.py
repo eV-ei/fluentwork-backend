@@ -5,7 +5,7 @@ from typing import Tuple
 import tempfile
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
 
 
 async def transcribe_audio(audio_base64: str) -> Tuple[str, float]:

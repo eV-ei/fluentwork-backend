@@ -4,7 +4,7 @@ from models import Session, Feedback, MessageRole
 import re
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
 
 
 def analyze_conversation(session: Session) -> Feedback:

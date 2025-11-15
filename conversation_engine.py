@@ -5,7 +5,8 @@ from typing import Tuple
 from datetime import datetime, timedelta
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Initialize OpenAI client (will use OPENAI_API_KEY env var)
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
 
 SYSTEM_PROMPT = """You are a professional, neutral manager in a 1:1 meeting with your team member.
 
